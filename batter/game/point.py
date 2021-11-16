@@ -76,3 +76,13 @@ class Point:
         x = self._x * -1
         y = self._y * -1
         return Point(x, y)
+
+    def reverse_x(self):
+        x = self._x * -1
+        y = self._y
+        return Point(x, y)
+
+    def reverse_y(self):
+        x = self._x
+        y = self._y * -1
+        return Point(x, y)
