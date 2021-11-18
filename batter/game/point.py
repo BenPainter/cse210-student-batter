@@ -1,3 +1,5 @@
+import random
+
 class Point:
     """Represents distance from an origin (0, 0).
 
@@ -84,5 +86,10 @@ class Point:
 
     def reverse_y(self):
         x = self._x
+        y = self._y * -1
+        return Point(x, y)
+
+    def reverse_y_paddle(self):
+        x = random.randint(-3,3)
         y = self._y * -1
         return Point(x, y)
