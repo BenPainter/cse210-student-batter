@@ -38,5 +38,5 @@ root                    (project root folder)
 * Asciimatics 1.12.0
 
 ## Authors
----
+Ben Painter: ben4painter@gmail.com
 * # TODO: Add your names and emails here
