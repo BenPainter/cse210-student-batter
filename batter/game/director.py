@@ -31,6 +31,8 @@ class Director:
             self._cue_action("update")
             self._cue_action("output")
             sleep(constants.FRAME_LENGTH)
+            if self._cast["ball"][0].get_position().get_y() == 19:
+                break 
 
 
     def _cue_action(self, tag):

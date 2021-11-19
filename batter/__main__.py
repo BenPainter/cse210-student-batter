@@ -43,11 +43,13 @@ def main(screen):
     ball.set_velocity(velocity)
     cast["ball"] = [ball]
     _points = 0
+    '''
     score = Actor()
     score.set_text(f"Score: {_points}")
     ball.set_position(Point(1, 0))
     ball.set_velocity(Point(0,0))
     cast["score"] = [score]
+    '''
     
     
     # create the script {key: tag, value: list}

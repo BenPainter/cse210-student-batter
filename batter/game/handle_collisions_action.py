@@ -42,5 +42,9 @@ class HandleCollisionsAction(Action):
             if ball_position.get_x() >= min_x and ball_position.get_x() <= max_x:
                 ball.set_velocity(ball.get_velocity().reverse_y_paddle())
         
+        if ball_position.get_y() == 1:
+            ball.set_velocity(ball.get_velocity().reverse_y())
+            
+
         return cast
         
