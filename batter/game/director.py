@@ -23,16 +23,21 @@ class Director:
         """
         self._cast = cast
         self._script = script
+        self._keep_playing = True
         
     def start_game(self):
         """Starts the game loop to control the sequence of play."""
-        while True:
+        while self._keep_playing:
             self._cue_action("input")
             self._cue_action("update")
             self._cue_action("output")
             sleep(constants.FRAME_LENGTH)
-            if self._cast["ball"][0].get_position().get_y() == 19:
-                break 
+            if self._cast["ball"][0].get_position().get_y() == int(constants.MAX_Y - 1):
+               self._keep_playing = False
+               print("GAME OVER")
+            if len(self._cast["brick"]) == 0:
+                self._keep_playing = False
+                print("You Win!!")
 
 
     def _cue_action(self, tag):

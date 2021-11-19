@@ -27,7 +27,7 @@ class HandleCollisionsAction(Action):
                 bricks.remove(brick)
         cast["brick"] = bricks
 
-        if ball_position.get_y() == 1:
+        if ball_position.get_y() == 0:
             ball.set_velocity(ball.get_velocity().reverse_y())
 
         if ball_position.get_x() <= 4:
