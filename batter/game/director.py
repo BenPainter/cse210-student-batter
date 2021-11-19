@@ -34,10 +34,13 @@ class Director:
             sleep(constants.FRAME_LENGTH)
             if self._cast["ball"][0].get_position().get_y() == int(constants.MAX_Y - 1):
                self._keep_playing = False
-               print("GAME OVER")
+               print("-------------------------")
+               print("        GAME OVER")
+               print("-------------------------")
             if len(self._cast["brick"]) == 0:
                 self._keep_playing = False
                 print("You Win!!")
+                print("That's rather impressive that you did that.")
 
 
     def _cue_action(self, tag):
